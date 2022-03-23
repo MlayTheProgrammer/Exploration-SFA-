@@ -1,8 +1,16 @@
+/*  Reggie Mlay     Carl Hawley		Leann		Hortencia	
+   This class takes an array of integers and sorts them using Bubblesort
+
+   Files Required: none
+   Input     : None
+   Output    : None
+   Sample Run: n/a
+*/
 import java.util.Random;
 import java.util.Scanner;
-
 public class Bubblesort
 {
+    public static int count = 0;
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -49,6 +57,7 @@ public class Bubblesort
                     A[j] = A[j+1];
                     A[j+1] = temp;
                 }
+                count++;
             }
         }
 

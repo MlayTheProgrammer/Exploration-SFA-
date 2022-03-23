@@ -1,3 +1,11 @@
+/*  Reggie Mlay     Carl Hawley		Leann		Hortencia	
+   This class provides a framework for testing and printing functions in Mergesort.java and Bubblesort.java
+   Files Required: Mergesort.java and Bubblesort.java
+   Input     : None
+   Output    : None
+   Sample Run: n/a
+*/
+
 import java.util.Random;
 public class Test
 {
@@ -11,7 +19,7 @@ public class Test
         Mergesort.mergesort(new int[]{1,2});
         Bubblesort.bubblesort(new int[]{1, 2});
         //table header
-        System.out.format("%10s\t%5s\t%20s\n", "TYPE", "INDEX", "TIME(ns)");
+        System.out.format("%10s\t%5s\t%20s\t%25s\n", "TYPE", "INDEX", "TIME(ns)", "# OF BASIC OPERATIONS");
         for(int n = START; n< END; n++)
         {
             start_time = System.nanoTime();
@@ -30,14 +38,14 @@ public class Test
             Mergesort.mergesort(arr1);
             stop_time = System.nanoTime();
             time = stop_time-start_time-over_time;
-            System.out.format("%10s\t%5d\t%20d\n","mergesort", n, time);
+            System.out.format("%10s\t%5d\t%20d\t%20d\n","Mergesort:", n, time, Mergesort.count);
 
             //try bubblesort
             start_time = System.nanoTime();
             Bubblesort.bubblesort(arr2);
             stop_time = System.nanoTime();
             time = stop_time-start_time-over_time;
-            System.out.format("%10s\t%5d\t%20d\n","bubblesort", n, time);
+            System.out.format("%10s\t%5d\t%20d\t%20d\n","Bubblesort:", n, time, Bubblesort.count);
         }
     }
     private static void print_arr(int[] arr)

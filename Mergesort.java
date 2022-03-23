@@ -1,9 +1,17 @@
+/*  Reggie Mlay     Carl Hawley		Leann		Hortencia	
+   This class takes an array of integers and sorts them using Mergesort
+
+   Files Required: none
+   Input     : None
+   Output    : None
+   Sample Run: n/a
+*/
 import java.util.Scanner;
 import java.util.Random;
 import java.lang.Math;
-
 public class Mergesort
 {
+    public static int count = 0;
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -67,6 +75,7 @@ public class Mergesort
                 k++;
                 j++;
             }
+            count++;
         }
         else
         {
@@ -76,6 +85,7 @@ public class Mergesort
                 k++;
                 i++;
             }
+            count++;
         }
     }
 
