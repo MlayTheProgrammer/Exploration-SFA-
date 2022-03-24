@@ -12,7 +12,7 @@ public class Test
     public static void main(String[] args)
     {
         int START = 0;
-        int END = 200;
+        int END = 5000;
         long start_time, stop_time, over_time, time;
         Random r = new Random();
         // running once to eliminate first-time-run bug
